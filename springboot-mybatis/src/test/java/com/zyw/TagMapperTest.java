@@ -28,6 +28,15 @@ public class TagMapperTest {
         System.out.println(tagDto.getName());
     }
 
+    @Test
+    public void testInsert(){
+
+        TagDto tagDto = new TagDto();
+        tagDto.setName("测试插入");
+        tagMapper.insert(tagDto);
+    }
+
+
 
 
 }
