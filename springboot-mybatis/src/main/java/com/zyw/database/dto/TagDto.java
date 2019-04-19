@@ -1,28 +1,25 @@
 package com.zyw.database.dto;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
- * tag
+ * 标签Dto
  *
- * @author
+ * @author: zyw9527
+ * @version: v1.0  Created in 2019年04月19日  11:44 by zyw9527
  */
-public class TagDto implements Serializable {
+
+public class TagDto {
 
     private Integer id;
-
     private String name;
-
     private Date gmtCreate;
 
     private Date gmtModified;
 
-    private static final long serialVersionUID = 1L;
-
     public Integer getId() {
-        return id;
+        return this.id;
+
     }
 
     public void setId(Integer id) {
@@ -30,7 +27,8 @@ public class TagDto implements Serializable {
     }
 
     public String getName() {
-        return name;
+        return this.name;
+
     }
 
     public void setName(String name) {
