@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zyw</groupId>
-    <artifactId>springboot-mybatis</artifactId>
+    <artifactId>springboot_mybatis_plus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-mybatis</name>
-    <description>Demo project for Spring Boot</description>
+    <name>springboot_mybatis_plus</name>
+    <description>springboot整合mybatis</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -25,14 +25,14 @@
         </dependency>
 
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-        <!--mybatis 依赖-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.0.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -40,12 +40,11 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-      <!--  &lt;!&ndash;mybatis-plus 依赖&ndash;&gt;
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.0</version>
-        </dependency>-->
+        </dependency>
 
     </dependencies>
 
@@ -56,23 +55,6 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-
-        <resources>
-            <!--引入静态文件-->
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-            <!--引入mapper对应的xml文件-->
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
-
-
 
 </project>

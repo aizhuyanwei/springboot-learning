@@ -1,8 +1,12 @@
 package com.zyw.database.dto;
 
 
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -11,10 +15,12 @@ import java.util.Date;
  * @author: zyw9527
  * @version: v1.0  Created in 2019年04月15日  15:38 by zyw9527
  */
-@TableName("article")
-public class ArticleDto {
+@TableName("article")   //指定表名  不指定的话默认找article_dto
+public class ArticleDto implements Serializable {
 
     private Long id;
+    @TableId(type = IdType.UUID)
+    private String articleCode;
 
     private String title;
 
@@ -89,5 +95,14 @@ public class ArticleDto {
 
     public void setGmtModified(Date gmtModified) {
         this.gmtModified = gmtModified;
+    }
+
+    public String getArticleCode() {
+        return this.articleCode;
+
+    }
+
+    public void setArticleCode(String articleCode) {
+        this.articleCode = articleCode;
     }
 }

@@ -1,6 +1,5 @@
 package com.zyw.database.mapper;
 
-import com.zyw.database.dto.ArticleDto;
 import com.zyw.database.dto.TagDto;
 import org.apache.ibatis.annotations.Mapper;
 

@@ -4,6 +4,7 @@
 
     <resultMap id="BaseResultMap" type="com.zyw.database.dto.ArticleDto">
         <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="article_code" jdbcType="VARCHAR" property="articleCode"/>
         <result column="title" jdbcType="VARCHAR" property="title"/>
         <result column="introduction" jdbcType="VARCHAR" property="introduction"/>
         <result column="html_material" jdbcType="VARCHAR" property="htmlMaterial"/>
