@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @ApiOperation(value="创建用户", notes="根据User对象创建用户")
-    @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User.class")
+   // @ApiImplicitParam(name = "user", value = "用户详细实体user", required = true, dataType = "User.class")
     @RequestMapping(value="", method=RequestMethod.POST)
     public String postUser(@RequestBody User user) {
         users.put(user.getId(), user);

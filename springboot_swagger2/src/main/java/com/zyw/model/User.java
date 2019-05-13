@@ -2,7 +2,6 @@ package com.zyw.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
 
 /**
  * 用户
@@ -16,6 +15,7 @@ public class User {
      * 主键id
      */
     @ApiModelProperty("主键id")
+
     private Long id;
     /**
      * 姓名
