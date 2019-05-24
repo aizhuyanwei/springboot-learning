@@ -1,0 +1,22 @@
+server:
+  port: 9999
+
+spring:
+  rabbitmq:
+    host: 192.168.95.74
+    port: 5672
+    username: bysoft
+    password: bysoft
+    # 开启发送确认
+    publisher-confirms: true
+    #开启发送失败退回
+    publisher-returns: true
+    #开启ack 消息默认模式  消费失败 退回
+    listener:
+      direct:
+        acknowledge-mode: manual
+      simple:
+        acknowledge-mode: manual
+
+  application:
+    name: rabbitmq-demo
